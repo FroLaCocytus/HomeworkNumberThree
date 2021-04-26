@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3</title>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css"></link>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="flex-box">
+			<div class="box">
+				<div class="flex-toggle-tab">
+					<div class="toggle-tab">
+						<button onclick="FirstTabClick()" class="first-tab active">LOG IN</button>
+						<button onclick="SecondTabClick()" class="second-tab">REGISTER</button>
+					</div>
+				</div>
+
+				<form method="dialog" class="first-form toggle-form" novalidate>
+					<input onfocus="InputOnFocus(this)" onblur="InputOnBlur(this)" class="first-form first-input" type="email" name="" placeholder="E-mail">
+					<input onfocus="InputOnFocus(this)" onblur="InputOnBlur(this)" class="first-form second-input" type="password" name="" placeholder="Password">
+					<button onclick="LogInClick()" class="first-form sign">Log In</button>
+					<a onclick="ForgotPasswordClick()" href="#" >Forgot Password?</a>
+				</form>
+
+				<form method="dialog" class="second-form toggle-form del" novalidate>
+					<input onfocus="InputOnFocus(this)" onblur="InputOnBlur(this)" onkeyup="FirstInputHandlerSF(this)" class="second-form first-input" type="email" name="" placeholder="E-mail">
+					<label class="second-form first-label del"></label>
+					<input onfocus="InputOnFocus(this)" onblur="InputOnBlur(this)" onkeyup="SecondInputHandlerSF(this)" class="second-form second-input" type="text" name="" placeholder="Username">
+					<label class="second-form second-label del"></label>
+					<input onfocus="InputOnFocus(this)" onblur="InputOnBlur(this)" onkeyup="ThirdInputHandlerSF(this)"class="second-form third-input" type="password" name="" placeholder="Password">
+					<label class="second-form third-label del"></label>
+					<div class="second-form check">
+						<input type="checkbox">
+						<label>I accept the terms of the form evaluation
+							<a onclick ="handleClickTerms" href="#"></a>
+						</label>
+					</div>
+					<button onclick="RegisterClick()" class="second-form reg">Register</button>
+				</form>
+			</div>
+		</div>
+
+		
+
+	</body>
+</html> 
